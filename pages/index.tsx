@@ -21,7 +21,7 @@ const Home = ({ API_KEY }) => {
           Netflix Clone
         </h1>
 
-        <Banner />
+        <Banner API_KEY={API_KEY} />
 
         <Row
           title='Netflix Originals'
