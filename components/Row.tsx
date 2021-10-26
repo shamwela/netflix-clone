@@ -1,14 +1,11 @@
 import { useEffect, useState } from 'react'
 
-const baseUrl = 'https://api.themoviedb.org/3'
-const baseImageUrl = 'https://image.tmdb.org/t/p/original/'
-
 const Row = ({ title, fetchUrl }) => {
   const [movies, setMovies] = useState([])
 
   useEffect(() => {
     const fetchMovies = async () => {
-      const response = await fetch(baseUrl + fetchUrl)
+      const response = await fetch('https://api.themoviedb.org/3' + fetchUrl)
       const { results } = await response.json()
       setMovies(results)
     }
@@ -28,7 +25,7 @@ const Row = ({ title, fetchUrl }) => {
             // Replace this with next/image later
             <img
               key={id}
-              src={baseImageUrl + poster_path}
+              src={'https://image.tmdb.org/t/p/original/' + poster_path}
               alt={name}
               loading='lazy'
               className='w-40 transition-transform duration-500 rounded cursor-pointer hover:scale-110'
