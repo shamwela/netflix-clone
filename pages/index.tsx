@@ -1,3 +1,4 @@
+import Banner from 'components/Banner'
 import Row from 'components/Row'
 import Head from 'next/head'
 
@@ -19,6 +20,9 @@ const Home = ({ API_KEY }) => {
         >
           Netflix Clone
         </h1>
+
+        <Banner />
+
         <Row
           title='Netflix Originals'
           fetchUrl={`/discover/tv?api_key=${API_KEY}&with_networks=213`}

@@ -7,13 +7,13 @@ const Row = ({ title, fetchUrl }) => {
   const [movies, setMovies] = useState([])
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchMovies = async () => {
       const response = await fetch(baseUrl + fetchUrl)
       const { results } = await response.json()
       setMovies(results)
     }
 
-    fetchData()
+    fetchMovies()
   }, [movies])
 
   return (
