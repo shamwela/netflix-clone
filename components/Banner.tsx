@@ -16,23 +16,25 @@ const Banner = ({ API_KEY }) => {
     fetchMovies()
   }, [])
 
-  const { name } = movie
+  const { name, overview } = movie
 
   return (
     <section
+      className='object-contain'
       style={{
         backgroundSize: 'cover',
-        backgroundImage: `url("https://image.tmdb.org/t/p/original${movie?.backdrop_path})`,
         backgroundPosition: 'center center',
-        height: '20px',
+        minHeight: '448px',
+        backgroundImage: `url("https://image.tmdb.org/t/p/original${movie?.backdrop_path})`,
       }}
     >
-      <div>
-        <h2>{name}</h2>
-        <button>Play</button>
-        <button>More Info</button>
-
-        <p>{movie?.overview}</p>
+      <div className='flex flex-col gap-y-4' style={{ maxWidth: '40rem' }}>
+        <h2 style={{ fontSize: '2.5rem' }}>{name}</h2>
+        <p>{overview}</p>
+        <div>
+          <button className='mr-4'>Play</button>
+          <button>More Info</button>
+        </div>
       </div>
     </section>
   )
