@@ -10,7 +10,15 @@ const Home = ({ API_KEY }) => {
       </Head>
 
       <main>
-        <h1>Netflix Clone</h1>
+        <h1
+          style={{
+            fontSize: '2rem',
+            color: '#e50914',
+            textTransform: 'uppercase',
+          }}
+        >
+          Netflix Clone
+        </h1>
         <Row
           title='Netflix Originals'
           fetchUrl={`/discover/tv?api_key=${API_KEY}&with_networks=213`}
