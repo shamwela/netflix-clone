@@ -1,3 +1,14 @@
 @tailwind base;
+
+*,
+*::before,
+*::after {
+  color: #fff;
+}
+
+body {
+  background-color: #181818;
+}
+
 @tailwind components;
 @tailwind utilities;
