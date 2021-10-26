@@ -18,18 +18,21 @@ const Row = ({ title, fetchUrl }) => {
   }, [movies])
 
   return (
-    <section className=''>
+    <section>
       <h2>{title}</h2>
 
-      <section>
+      <section className='flex gap-x-4'>
         {movies.map((movie) => (
-          <Image
-            src={baseImageUrl + movie.poster_path}
-            alt={movie.name}
-            width={100}
-            height={100}
-            key={movie.id}
-          />
+          <div style={{ height: '100px' }}>
+            <Image
+              key={movie.id}
+              src={baseImageUrl + movie.poster_path}
+              alt={movie.name}
+              width={999}
+              height={999}
+              className='object-contain h-full transition-transform duration-500 object object-w-full hover:scale-110'
+            />
+          </div>
         ))}
       </section>
     </section>
