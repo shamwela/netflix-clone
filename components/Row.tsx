@@ -11,7 +11,7 @@ const Row = ({ title, fetchUrl }) => {
     }
 
     fetchMovies()
-  }, [movies])
+  }, [])
 
   return (
     <section>
