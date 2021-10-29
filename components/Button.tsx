@@ -1,5 +1,5 @@
-const primaryButtonColors = 'bg-white hover:bg-white-dark text-black'
-const secondaryButtonColors = 'bg-gray hover:bg-gray-dark text-white'
+const primaryButtonColors = 'bg-white hover:bg-darkWhite text-black'
+const secondaryButtonColors = 'bg-gray hover:bg-darkGray text-white'
 
 const Button = ({
   type = 'primary',

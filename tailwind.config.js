@@ -6,10 +6,10 @@ module.exports = {
     colors: {
       black: '#000',
       white: '#fff',
-      'white-dark': 'rgba(255, 255, 255, 0.75)',
+      darkWhite: 'rgba(255, 255, 255, 0.75)',
       gray: 'rgba(109, 109, 110, 0.7)',
-      'gray-dark': 'rgba(109, 109, 110, 0.4)',
-    }
+      darkGray: 'rgba(109, 109, 110, 0.4)',
+    },
   },
   variants: {
     extend: {},
