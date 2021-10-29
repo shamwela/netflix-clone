@@ -4,8 +4,8 @@ module.exports = {
   darkMode: false,
   theme: {
     colors: {
-      black: '#000',
-      white: '#fff',
+      black: 'black',
+      white: 'white',
       darkWhite: 'rgba(255, 255, 255, 0.75)',
       gray: 'rgba(109, 109, 110, 0.7)',
       darkGray: 'rgba(109, 109, 110, 0.4)',
