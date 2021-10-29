@@ -4,6 +4,7 @@ module.exports = {
   darkMode: false,
   theme: {
     colors: {
+      red: '#e50914',
       black: 'black',
       white: 'white',
       darkWhite: 'rgba(255, 255, 255, 0.75)',
