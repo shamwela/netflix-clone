@@ -24,10 +24,6 @@ h2 {
   font-size: 1.1875rem;
 }
 
-button {
-  @apply px-5 py-2 font-medium text-black bg-white rounded;
-}
-
 p {
   @apply md:text-2xl;
 }
