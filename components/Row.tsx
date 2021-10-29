@@ -18,20 +18,26 @@ const Row = ({ title, fetchUrl }) => {
       <h2>{title}</h2>
 
       <section className='flex overflow-x-auto overflow-y-hidden gap-x-1'>
-        {movies.map((movie) => {
-          const { id, poster_path, name } = movie
-
-          return (
-            // Replace this with next/image later
+        {movies.map(({ id, poster_path, name }) => (
+          <a
+            key={id}
+            href={
+              'https://www.youtube.com/results?search_query=netflix+trailer+' +
+              name
+            }
+            target='_blank'
+            rel='noopener'
+            className='w-40'
+          >
+            {/* Replace this with next/image later */}
             <img
-              key={id}
               src={'https://image.tmdb.org/t/p/original/' + poster_path}
               alt={name}
               loading='lazy'
-              className='w-40 transition-transform duration-500 cursor-pointer hover:scale-110'
+              className='w-40 transition-transform duration-500 hover:scale-110'
             />
-          )
-        })}
+          </a>
+        ))}
       </section>
     </section>
   )
