@@ -26,5 +26,9 @@ p {
   @apply md:text-2xl;
 }
 
+img {
+  @apply rounded;
+}
+
 @tailwind components;
 @tailwind utilities;

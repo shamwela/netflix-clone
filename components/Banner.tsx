@@ -27,11 +27,11 @@ const Banner = ({ API_KEY }) => {
 
   return (
     <section
-      className='object-contain'
+      className='flex items-center object-contain p-4 rounded'
       style={{
+        minHeight: '80vh',
         backgroundSize: 'cover',
         backgroundPosition: 'center center',
-        minHeight: '448px',
         backgroundImage: `url('https://image.tmdb.org/t/p/original${backdropPath}')`,
       }}
     >
