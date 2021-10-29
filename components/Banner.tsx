@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import Button from './Button'
 
 const Banner = ({ API_KEY }) => {
   const [name, setName] = useState('')
@@ -37,9 +38,9 @@ const Banner = ({ API_KEY }) => {
       <div className='flex flex-col gap-y-4' style={{ maxWidth: '40rem' }}>
         <h2 style={{ fontSize: '2.5rem' }}>{name}</h2>
         <p>{overview}</p>
-        <div>
-          <button className='mr-4'>Play</button>
-          <button>More Info</button>
+        <div className='flex gap-x-4'>
+          <Button type='primary'>Play</Button>
+          <Button type='secondary'>More Info</Button>
         </div>
       </div>
     </section>
