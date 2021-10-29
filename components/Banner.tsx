@@ -1,22 +1,28 @@
 import { useEffect, useState } from 'react'
 
 const Banner = ({ API_KEY }) => {
-  const [movie, setMovie] = useState({})
+  const [name, setName] = useState('')
+  const [overview, setOverview] = useState('')
+  const [backdropPath, setBackdropPath] = useState('')
 
   useEffect(() => {
     const fetchMovies = async () => {
-      // Netflix Originals
+      // fetch Netflix Originals
       const response = await fetch(
         `https://api.themoviedb.org/3/discover/tv?api_key=${API_KEY}&with_networks=213`
       )
       const { results } = await response.json()
-      setMovie(results[Math.floor(Math.random() * results.length)])
+      const randomNumber = Math.floor(Math.random() * results.length)
+      const randomMovie = results[randomNumber]
+      const { name, overview, backdrop_path } = randomMovie
+
+      setName(name)
+      setOverview(overview)
+      setBackdropPath(backdrop_path)
     }
 
     fetchMovies()
   }, [])
-
-  const { name, overview } = movie
 
   return (
     <section
@@ -25,7 +31,7 @@ const Banner = ({ API_KEY }) => {
         backgroundSize: 'cover',
         backgroundPosition: 'center center',
         minHeight: '448px',
-        backgroundImage: `url("https://image.tmdb.org/t/p/original${movie?.backdrop_path})`,
+        backgroundImage: `url('https://image.tmdb.org/t/p/original${backdropPath}')`,
       }}
     >
       <div className='flex flex-col gap-y-4' style={{ maxWidth: '40rem' }}>
