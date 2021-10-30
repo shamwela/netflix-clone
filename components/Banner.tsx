@@ -45,7 +45,7 @@ const Banner = ({ API_KEY }) => {
               style={{ maxWidth: '40rem' }}
             >
               <h2 style={{ fontSize: '2.5rem' }}>{name}</h2>
-              <p>{overview}</p>
+              <p className='hidden md:block'>{overview}</p>
               <div className='flex gap-x-4'>
                 <Button type='primary'>Play</Button>
                 <Button type='secondary'>More Info</Button>
