@@ -34,7 +34,7 @@ const Row = ({ title, fetchUrl }) => {
               src={'https://image.tmdb.org/t/p/original/' + poster_path}
               alt={name}
               loading='lazy'
-              className='w-40 transition-transform duration-500 hover:scale-110'
+              className='w-40'
             />
           </a>
         ))}
