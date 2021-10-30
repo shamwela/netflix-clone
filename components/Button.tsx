@@ -12,7 +12,10 @@ const Button = ({
     type === 'primary' ? primaryButtonColors : secondaryButtonColors
 
   return (
-    <button className={'px-5 py-2 font-medium rounded ' + colors}>
+    <button
+      className={'px-5 py-2 font-bold rounded ' + colors}
+      style={{ fontSize: '0.95rem' }}
+    >
       {children}
     </button>
   )
