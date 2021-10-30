@@ -30,7 +30,9 @@ const Banner = ({ API_KEY }) => {
       {name && backdropPath && (
         <>
           <section
-            className='absolute top-0 left-0 right-0 flex items-center object-contain w-full p-4 rounded'
+            // Used id here to colocate the paddings
+            id='banner'
+            className='absolute top-0 left-0 right-0 flex items-center object-contain w-full rounded'
             style={{
               minHeight: '80vh',
               backgroundPosition: 'center center',

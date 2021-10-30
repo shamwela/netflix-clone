@@ -10,8 +10,14 @@
     sans-serif;
 }
 
+body,
+/* Used id here to colocate the paddings */
+#banner {
+  @apply px-4 md:px-14;
+}
+
 body {
-  @apply min-h-screen px-4 pb-4 md:px-14;
+  @apply min-h-screen pb-4;
   background-color: #141414;
 }
 
