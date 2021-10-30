@@ -26,24 +26,28 @@ const Banner = ({ API_KEY }) => {
   }, [])
 
   return (
-    <section
-      className='flex items-center object-contain p-4 rounded'
-      style={{
-        minHeight: '80vh',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center center',
-        backgroundImage: `url('https://image.tmdb.org/t/p/original${backdropPath}')`,
-      }}
-    >
-      <div className='flex flex-col gap-y-4' style={{ maxWidth: '40rem' }}>
-        <h2 style={{ fontSize: '2.5rem' }}>{name}</h2>
-        <p>{overview}</p>
-        <div className='flex gap-x-4'>
-          <Button type='primary'>Play</Button>
-          <Button type='secondary'>More Info</Button>
-        </div>
-      </div>
-    </section>
+    <>
+      {name && backdropPath && (
+        <section
+          className='flex items-center object-contain p-4 rounded'
+          style={{
+            minHeight: '80vh',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center center',
+            backgroundImage: `url('https://image.tmdb.org/t/p/original${backdropPath}')`,
+          }}
+        >
+          <div className='flex flex-col gap-y-4' style={{ maxWidth: '40rem' }}>
+            <h2 style={{ fontSize: '2.5rem' }}>{name}</h2>
+            <p>{overview}</p>
+            <div className='flex gap-x-4'>
+              <Button type='primary'>Play</Button>
+              <Button type='secondary'>More Info</Button>
+            </div>
+          </div>
+        </section>
+      )}
+    </>
   )
 }
 
