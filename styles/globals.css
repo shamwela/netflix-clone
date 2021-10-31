@@ -1,12 +1,12 @@
-@tailwind base;
-
 @font-face {
   font-family: Inter;
   font-style: normal;
   font-weight: 100 900;
   font-display: optional;
-  src: url('/inter-variable.ttf') format('ttf');
+  src: url('/inter-variable.ttf') format('truetype');
 }
+
+@tailwind base;
 
 *,
 *::before,
