@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import Image from 'next/image'
 
 const Row = ({ title, fetchUrl }) => {
   const [movies, setMovies] = useState([])
@@ -17,7 +18,7 @@ const Row = ({ title, fetchUrl }) => {
     <section>
       <h2>{title}</h2>
 
-      <section className='flex overflow-x-auto overflow-y-hidden gap-x-1'>
+      <section className='flex overflow-x-auto overflow-y-hidden'>
         {movies.map(({ id, poster_path, name }) => (
           <a
             key={id}
@@ -27,15 +28,16 @@ const Row = ({ title, fetchUrl }) => {
             }
             target='_blank'
             rel='noopener'
-            className='w-40'
           >
-            {/* Replace this with next/image later */}
-            <img
-              src={'https://image.tmdb.org/t/p/original/' + poster_path}
-              alt={name}
-              loading='lazy'
-              className='w-40'
-            />
+            {/* This div is a hack to properly size the images */}
+            <div className='w-40'>
+              <Image
+                src={'https://image.tmdb.org/t/p/original/' + poster_path}
+                alt={name}
+                width={160}
+                height={239.89}
+              />
+            </div>
           </a>
         ))}
       </section>
