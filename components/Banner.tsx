@@ -25,7 +25,7 @@ const Banner = ({ movies }) => {
           <section
             // Used id here to colocate the paddings
             id='banner'
-            className='absolute top-0 left-0 right-0 flex items-center object-contain w-full rounded'
+            className='absolute top-0 left-0 right-0 items-center hidden object-contain w-full rounded md:flex'
             style={{
               minHeight: minHeight,
               backgroundPosition: 'center center',
@@ -45,7 +45,10 @@ const Banner = ({ movies }) => {
               </div>
             </div>
           </section>
-          <section style={{ minHeight: minHeight }}></section>
+          <section
+            className='hidden md:block'
+            style={{ minHeight: minHeight }}
+          ></section>
         </>
       )}
     </>
