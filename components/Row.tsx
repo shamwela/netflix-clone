@@ -12,10 +12,7 @@ const Row = ({ name, movies }) => {
           return (
             <a
               key={id}
-              href={
-                'https://www.youtube.com/results?search_query=netflix+trailer+' +
-                movieName
-              }
+              href={`https://www.youtube.com/results?search_query=Netflix+${movieName}+Trailer`}
               target='_blank'
               rel='noopener'
               aria-label={movieName}
