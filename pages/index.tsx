@@ -18,11 +18,11 @@ export const getStaticProps = async () => {
   const { results: trendingMovies } = await trendingResponse.json()
 
   return {
-    props: { API_KEY, netflixOriginals, trendingMovies },
+    props: { netflixOriginals, trendingMovies },
   }
 }
 
-const Home = ({ API_KEY, netflixOriginals, trendingMovies }) => {
+const Home = ({ netflixOriginals, trendingMovies }) => {
   return (
     <>
       <Head>
@@ -32,7 +32,7 @@ const Home = ({ API_KEY, netflixOriginals, trendingMovies }) => {
 
       <main>
         <Nav />
-        <Banner API_KEY={API_KEY} />
+        <Banner movies={netflixOriginals} />
         <Row name='Netflix Originals' movies={netflixOriginals} />
         <Row name='Trending' movies={trendingMovies} />
       </main>
