@@ -1,22 +1,9 @@
-import { useEffect, useState } from 'react'
 import Image from 'next/image'
 
-const Row = ({ title, fetchUrl }) => {
-  const [movies, setMovies] = useState([])
-
-  useEffect(() => {
-    const fetchMovies = async () => {
-      const response = await fetch('https://api.themoviedb.org/3' + fetchUrl)
-      const { results } = await response.json()
-      setMovies(results)
-    }
-
-    fetchMovies()
-  }, [])
-
+const Row = ({ name, movies }) => {
   return (
     <section>
-      <h2>{title}</h2>
+      <h2>{name}</h2>
 
       <section className='flex overflow-x-auto overflow-y-hidden'>
         {movies.map(({ id, poster_path, name, title }) => {
