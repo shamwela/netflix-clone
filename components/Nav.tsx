@@ -20,6 +20,7 @@ const Nav = () => {
         width='32'
         height='32'
         className='object-contain'
+        alt=''
       />
     </nav>
   )
