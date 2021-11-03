@@ -5,7 +5,7 @@ const Row = ({ name, movies }) => {
     <section>
       <h2>{name}</h2>
 
-      <section className='flex overflow-x-auto overflow-y-hidden'>
+      <section className='flex overflow-x-auto overflow-y-hidden gap-x-1'>
         {movies.map(({ id, poster_path, name, title }) => {
           const movieName = name || title
 
