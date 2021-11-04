@@ -24,13 +24,10 @@ const Banner = ({ movies }) => {
           <img
             src={`https://image.tmdb.org/t/p/original${backdropPath}`}
             alt={name}
-            className='absolute top-0 left-0 right-0 h-[80vh] object-cover w-screen hidden md:block'
+            className='absolute top-0 left-0 right-0 min-h-[80vh] object-cover w-screen hidden md:block rounded-none'
           />
 
-          <section
-            className='relative z-10 items-center hidden py-4 md:flex'
-            style={{ height: '80vh-64px' }} // Banner image's height - Nav's height
-          >
+          <section className='min-h-[70vh] relative z-10 items-center hidden py-4 md:flex '>
             <div className='flex flex-col w-2/3 gap-y-4'>
               <h2 className='text-4xl'>{name}</h2>
               <p>{overview}</p>

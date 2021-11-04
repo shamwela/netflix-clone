@@ -4,7 +4,7 @@ import Link from 'next/link'
 const Nav = () => {
   return (
     <nav
-      className='sticky top-0 z-10 flex items-center justify-between w-full py-2 min-h-10 md:py-4 md:min-h-16'
+      className='sticky top-0 z-10 flex items-center justify-between w-full py-2 min-h-[10vh] md:py-4'
       // style={{ backgroundColor: '#141414' }}
     >
       <Link href='/'>
