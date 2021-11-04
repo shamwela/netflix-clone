@@ -25,14 +25,14 @@ const Banner = ({ movies }) => {
             src={`https://image.tmdb.org/t/p/original${backdropPath}`}
             alt={name}
             className='absolute top-0 left-0 right-0 hidden object-cover w-screen rounded-none md:block'
-            style={{ minHeight: 'var(--banner-image-height)' }}
+            style={{ height: 'var(--banner-image-height)' }}
           />
 
           <section
             className='relative z-10 items-center hidden py-4 md:flex'
             style={{ minHeight: 'var(--banner-text-section-height)' }}
           >
-            <div className='flex flex-col w-2/3 gap-y-4'>
+            <div className='flex flex-col max-w-[45rem] gap-y-4'>
               <h2 className='text-4xl'>{name}</h2>
               <p>{overview}</p>
               <div className='flex gap-x-4'>
