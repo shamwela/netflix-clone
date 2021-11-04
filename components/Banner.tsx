@@ -29,11 +29,8 @@ const Banner = ({ movies }) => {
           />
 
           <section
-            className='min-h-[70vh] mt-[10vh] relative z-10 items-center hidden py-4 md:flex'
-            style={{
-              marginTop: 'var(--nav-height)',
-              minHeight: 'var(--banner-text-section-height)',
-            }}
+            className='relative z-10 items-center hidden py-4 md:flex'
+            style={{ minHeight: 'var(--banner-text-section-height)' }}
           >
             <div className='flex flex-col w-2/3 gap-y-4'>
               <h2 className='text-4xl'>{name}</h2>
