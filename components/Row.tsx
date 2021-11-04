@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 const Row = ({ name, movies }) => {
   return (
-    <section>
+    <section className='my-[3vw]'>
       <h2 className='text-[#999999] text-[1.1875rem] md:text-[1.375rem]'>
         {name}
       </h2>
