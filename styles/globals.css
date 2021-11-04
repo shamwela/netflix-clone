@@ -65,14 +65,6 @@ h3 {
   @apply font-bold;
 }
 
-h2 {
-  font-size: 1.1875rem;
-}
-
-p {
-  @apply md:text-[22px];
-}
-
 img {
   @apply rounded;
 }
