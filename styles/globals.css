@@ -1,5 +1,12 @@
 @tailwind base;
 
+:root {
+  /* These heights are set here to collocate */
+  --banner-image-height: 80vh;
+  --nav-height: 10vh;
+  --banner-text-section-height: 70vh; /* banner-image-height - nav-height */
+}
+
 @font-face {
   font-family: Inter;
   font-weight: 400 700;
@@ -41,8 +48,14 @@
   }
 }
 
+/* Paddings are set here to collocate */
+body,
+nav {
+  @apply px-4 md:px-14;
+}
+
 body {
-  @apply min-h-screen px-4 pb-4 md:px-14 bg-primary-background;
+  @apply min-h-screen pb-4 bg-primary-background;
 }
 
 h1,
