@@ -1,9 +1,5 @@
 @tailwind base;
 
-:root {
-  --primary-background-color: #141414;
-}
-
 @font-face {
   font-family: Inter;
   font-weight: 400 700;
@@ -33,21 +29,20 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-darkGray;
+  @apply bg-dark-gray;
 }
 
 /* For Firefox */
 @supports (scrollbar-color: red green) {
   * {
-    /* rgba(109, 109, 110, 0.7) is the "gray" color in tailwind.config.js */
-    scrollbar-color: rgba(109, 109, 110, 0.7) var(--primary-background-color);
+    /* Because gray and primary-background from tailwind.config.js can't be used here, they are duplicated */
+    scrollbar-color: rgba(109, 109, 110, 0.7) #141414;
     scrollbar-width: thin;
   }
 }
 
 body {
-  @apply min-h-screen px-4 pb-4 md:px-14;
-  background-color: var(--primary-background-color);
+  @apply min-h-screen px-4 pb-4 md:px-14 bg-primary-background;
 }
 
 h1,
