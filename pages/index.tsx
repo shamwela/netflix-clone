@@ -26,7 +26,7 @@ const Home = ({ netflixOriginals, trendingMovies }) => {
   return (
     <>
       <Head>
-        <title>Netflix Clone</title>
+        <title>Home - Netflix Clone</title>
         <meta name='description' content='Netflix Clone' />
       </Head>
 
