@@ -32,14 +32,19 @@ const Banner = ({ movies }) => {
             className='relative z-10 items-center hidden py-4 md:flex'
             style={{ minHeight: 'var(--banner-text-section-height)' }}
           >
-            <div className='flex flex-col max-w-[45rem] gap-y-4'>
+            <section className='flex flex-col max-w-[45rem] gap-y-4'>
               <h2 className='text-[2rem] md:text-[2.75rem]'>{name}</h2>
-              <p className='md:text-[1.375rem]'>{overview}</p>
-              <div className='flex gap-x-4'>
+              <p
+                className='text-[1.4vw]'
+                style={{ textShadow: '2px 2px 4px rgb(0 0 0 / 45%)' }}
+              >
+                {overview}
+              </p>
+              <section className='flex gap-x-4'>
                 <Button type='primary'>Play</Button>
                 <Button type='secondary'>More Info</Button>
-              </div>
-            </div>
+              </section>
+            </section>
           </section>
         </>
       )}
