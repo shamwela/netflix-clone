@@ -4,7 +4,9 @@
   /* These heights are set here to collocate */
   --banner-image-height: 80vh;
   --nav-height: 10vh;
-  --banner-text-section-height: calc(var(--banner-image-height) - var(--nav-height));
+  --banner-text-section-height: calc(
+    var(--banner-image-height) - var(--nav-height)
+  );
 }
 
 @font-face {
@@ -73,8 +75,9 @@ h2 {
   font-size: 2rem;
 }
 
+.rounded-custom, /* To make all border radius the same */
 img {
-  @apply rounded;
+  border-radius: 4px;
 }
 
 @tailwind components;
