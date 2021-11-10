@@ -4,7 +4,7 @@
   /* These heights are set here to collocate */
   --banner-image-height: 80vh;
   --nav-height: 10vh;
-  --banner-text-section-height: 70vh; /* banner-image-height - nav-height */
+  --banner-text-section-height: calc(var(--banner-image-height) - var(--nav-height));
 }
 
 @font-face {
