@@ -1,5 +1,4 @@
 import Banner from 'components/Banner'
-import Nav from 'components/Nav'
 import Row from 'components/Row'
 import Head from 'next/head'
 
@@ -31,7 +30,6 @@ const Home = ({ netflixOriginals, trendingMovies }) => {
       </Head>
 
       <main>
-        <Nav />
         <Banner movies={netflixOriginals} />
         <Row name='Netflix Originals' movies={netflixOriginals} />
         <Row name='Trending' movies={trendingMovies} />
