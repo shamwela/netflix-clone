@@ -2,7 +2,7 @@
 
 :root {
   /* These heights are set here to collocate */
-  --banner-image-height: 80vh;
+  --banner-image-height: 85vh;
   --nav-height: 10vh;
   --banner-text-section-height: calc(
     var(--banner-image-height) - var(--nav-height)
