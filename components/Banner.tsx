@@ -14,13 +14,13 @@ const Banner = ({ movies }) => {
     setName(name)
     setOverview(overview)
     setBackdropPath(backdrop_path)
-  }, [])
+  }, [movies])
 
   return (
     <>
       {name && backdropPath && (
         <>
-          {/* Really hard to implement this with Next.js Image */}
+          {/* Used normal <img> tag here because it is really hard to implement this with Next.js Image */}
           <img
             src={`https://image.tmdb.org/t/p/original${backdropPath}`}
             alt={name}

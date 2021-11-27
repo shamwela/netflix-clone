@@ -16,7 +16,7 @@ const Row = ({ name, movies }) => {
               key={id}
               href={`https://www.youtube.com/results?search_query=Netflix+${movieName}+Trailer`}
               target='_blank'
-              rel='noopener'
+              rel='noreferrer'
               aria-label={movieName}
             >
               {/* This div is a hack to properly size the images */}

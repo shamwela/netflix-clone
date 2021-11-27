@@ -19,8 +19,8 @@ const Custom404 = () => {
       >
         <h1 className='text-3xl md:text-7xl text-shadow'>Lost your way?</h1>
         <p className='text-shadow md:text-2xl'>
-          Sorry, we can't find that page. You'll find lots to explore on the
-          home page.
+          Sorry, we can&apos;t find that page. You&apos;ll find lots to explore
+          on the home page.
         </p>
         <Link href='/'>
           <a>
