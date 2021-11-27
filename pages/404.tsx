@@ -13,8 +13,7 @@ const Custom404 = () => {
         className='absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center p-4 bg-fixed bg-center bg-no-repeat bg-cover gap-y-4'
         style={{
           top: 'var(--nav-height)',
-          backgroundImage:
-            'url(https://assets.nflxext.com/ffe/siteui/pages/errors/bg-lost-in-space.png)',
+          backgroundImage: 'url(/lost-in-space-background-image.png)',
         }}
       >
         <h1 className='text-3xl md:text-7xl text-shadow'>Lost your way?</h1>
