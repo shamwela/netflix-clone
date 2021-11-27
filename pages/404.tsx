@@ -6,7 +6,7 @@ const Custom404 = () => {
   return (
     <>
       <Head>
-        <title>Not found - Netflix Clone</title>
+        <title>Netflix Clone</title>
       </Head>
 
       <main
