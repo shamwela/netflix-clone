@@ -41,11 +41,6 @@ export const getStaticProps = async () => {
   )
   const { results: romance } = await romanceResponse.json()
 
-  const documentariesResponse = await fetch(
-    `${baseUrl}discover/movie?api_key=${API_KEY}&with_genres=99`
-  )
-  const { results: documentaries } = await documentariesResponse.json()
-
   return {
     props: {
       netflixOriginals,
@@ -55,7 +50,6 @@ export const getStaticProps = async () => {
       comedy,
       horror,
       romance,
-      documentaries,
     },
   }
 }
@@ -68,7 +62,6 @@ const Home = ({
   comedy,
   horror,
   romance,
-  documentaries,
 }) => {
   return (
     <>
@@ -86,7 +79,6 @@ const Home = ({
         <Row name='Comedy Movies' movies={comedy} />
         <Row name='Horror Movies' movies={horror} />
         <Row name='Romance Movies' movies={romance} />
-        <Row name='Documentaries' movies={documentaries} />
       </main>
     </>
   )
