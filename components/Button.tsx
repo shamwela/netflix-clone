@@ -13,7 +13,7 @@ const Button = ({
 
   return (
     <button
-      className={'px-5 py-2 font-bold rounded-custom ' + colors}
+      className={'px-5 py-2 font-bold rounded-custom flex gap-x-4 items-center ' + colors}
       style={{ fontSize: '0.95rem' }}
     >
       {children}
