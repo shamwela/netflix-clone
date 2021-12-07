@@ -5,64 +5,42 @@ import Head from 'next/head'
 export const getStaticProps = async () => {
   const baseUrl = 'https://api.themoviedb.org/3/'
   const API_KEY = process.env.API_KEY
+  const netflixOriginalsUrl = `${baseUrl}discover/tv?api_key=${API_KEY}&with_networks=213`
+  const trendingUrl = `${baseUrl}trending/all/week?api_key=${API_KEY}&language=en-US`
+  const topRatedUrl = `${baseUrl}movie/top_rated?api_key=${API_KEY}&language=en-US`
+  const actionUrl = `${baseUrl}discover/movie?api_key=${API_KEY}&with_genres=28`
+  const comedyUrl = `${baseUrl}discover/movie?api_key=${API_KEY}&with_genres=35`
+  const horrorUrl = `${baseUrl}discover/movie?api_key=${API_KEY}&with_genres=27`
+  const romanceUrl = `${baseUrl}discover/movie?api_key=${API_KEY}&with_genres=10749`
 
-  const netflixOriginalsResponse = await fetch(
-    `${baseUrl}discover/tv?api_key=${API_KEY}&with_networks=213`
-  )
-  const { results: netflixOriginals } = await netflixOriginalsResponse.json()
-
-  const trendingResponse = await fetch(
-    `${baseUrl}trending/all/week?api_key=${API_KEY}&language=en-US`
-  )
-  const { results: trending } = await trendingResponse.json()
-
-  const topRatedResponse = await fetch(
-    `${baseUrl}movie/top_rated?api_key=${API_KEY}&language=en-US`
-  )
-  const { results: topRated } = await topRatedResponse.json()
-
-  const actionResponse = await fetch(
-    `${baseUrl}discover/movie?api_key=${API_KEY}&with_genres=28`
-  )
-  const { results: action } = await actionResponse.json()
-
-  const comedyResponse = await fetch(
-    `${baseUrl}discover/movie?api_key=${API_KEY}&with_genres=35`
-  )
-  const { results: comedy } = await comedyResponse.json()
-
-  const horrorResponse = await fetch(
-    `${baseUrl}discover/movie?api_key=${API_KEY}&with_genres=27`
-  )
-  const { results: horror } = await horrorResponse.json()
-
-  const romanceResponse = await fetch(
-    `${baseUrl}discover/movie?api_key=${API_KEY}&with_genres=10749`
-  )
-  const { results: romance } = await romanceResponse.json()
+  const results = await Promise.all([
+    fetch(netflixOriginalsUrl),
+    fetch(trendingUrl),
+    fetch(topRatedUrl),
+    fetch(actionUrl),
+    fetch(comedyUrl),
+    fetch(horrorUrl),
+    fetch(romanceUrl),
+  ])
+  const dataPromises = results.map((result) => result.json())
+  const finalData = await Promise.all(dataPromises)
 
   return {
-    props: {
-      netflixOriginals,
-      trending,
-      topRated,
-      action,
-      comedy,
-      horror,
-      romance,
-    },
+    props: { finalData },
   }
 }
 
-const Home = ({
-  netflixOriginals,
-  trending,
-  topRated,
-  action,
-  comedy,
-  horror,
-  romance,
-}) => {
+const Home = (finalData) => {
+  const [
+    netflixOriginals,
+    trending,
+    topRated,
+    action,
+    comedy,
+    horror,
+    romance,
+  ] = finalData.finalData.map((data) => data.results)
+
   return (
     <>
       <Head>
