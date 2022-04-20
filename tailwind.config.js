@@ -1,7 +1,8 @@
 module.exports = {
-  mode: 'jit',
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
-  darkMode: false,
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+  ],
   theme: {
     colors: {
       red: '#e50914',
@@ -14,12 +15,8 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sans: "'Netflix Sans', Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif",
+        sans: 'Inter, sans-serif',
       },
     },
   },
-  variants: {
-    extend: {},
-  },
-  plugins: [],
 }
